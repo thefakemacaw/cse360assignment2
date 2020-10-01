@@ -6,6 +6,7 @@ public class AddingMachine {
 
 		public AddingMachine () {
 			total = 0;  // not needed - included for clarity
+			history = "0";
 		}
 
 		public int getTotal () {
@@ -14,15 +15,16 @@ public class AddingMachine {
 		
 		public void add (int value) {
 			total += value;
+			history = history + " + " + value;
 		}
 
 		public void subtract (int value) {
 			total -= value;
-			
+			history = history + " - " + value;
 		}
 
 		public String toString () {
-			return "";
+			return history;
 		}
 
 		public void clear() {
